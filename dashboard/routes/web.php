@@ -27,3 +27,4 @@ Route::view('product-seller','layouts/seller/pages/product')->name('productS');
 Route::view('client-seller','layouts/seller/pages/clients')->name('clientS');
 Route::view('orders-seller','layouts/seller/pages/orders')->name('ordersS');
 Route::view('sents-seller','layouts/seller/pages/sents')->name('sentsS');
+Route::view('profile-seller','layouts/seller/pages/profile')->name('profileS');

@@ -9,7 +9,7 @@
          <div class="col-xl-11">
            <div class="bd-example bd-example-tabs">
              <div class="card">
-               <div class="card-body">
+               <div class="card-body profile-head">
                  <ul class="nav nav-tabs" id="myTab" role="tablist">
                    <li class="nav-item">
                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Lista Pedidos</a>
