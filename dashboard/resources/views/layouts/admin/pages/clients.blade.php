@@ -1,5 +1,5 @@
 <!-- Hey Por favor traeme la template de base-->
-@extends('./master.index')
+@extends('./master.admin.index')
 
 @section('titulo','Clientes')
 

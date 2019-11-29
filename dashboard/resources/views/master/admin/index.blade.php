@@ -13,6 +13,7 @@
   <link href="css/app.css" rel="stylesheet" type="text/css">
   <link href="css/sb-admin-2.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+  <link rel="stylesheet" href="css/sb-profile.css">
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -22,18 +23,18 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Start Sidebar -->
-    @include('layouts.sidebar')
+    @include('layouts.admin.sidebar')
     <!-- End Sidebar -->
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
         <!-- Main Content -->
         <div id="content">
-            @include('layouts.top-bar')
+            @include('layouts.admin.top-bar')
 
             @yield('contenido')
             <!-- Footer -->
-            @include('layouts.footer')
+            @include('layouts.admin.footer')
             <!-- End of Footer -->
         </div>
         <!-- End Main Content -->

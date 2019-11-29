@@ -1,4 +1,4 @@
-@extends('master.index')
+@extends('master.admin.index')
 
 @section('titulo','Productos')
 

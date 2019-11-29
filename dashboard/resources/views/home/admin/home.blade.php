@@ -1,4 +1,4 @@
-@extends('./master.index')
+@extends('./master.admin.index')
 
 @section('titulo','Home')
 
@@ -6,17 +6,17 @@
   <!-- Begin Page Content -->
   <div class="container-fluid">
     <!--Incluye Articulos de  reportes en ganancias -->
-      @include('layouts.article')
+      @include('layouts.admin.article')
 
     <!-- Content Row -->
     <div class="row">
       <!-- Incluye Analisis de graficos-->
-      @include('layouts.graphics')
+      @include('layouts.admin.graphics')
     </div>
 
     <!-- Content Row -->
     <div class="row">
-      @include('layouts.ranking')
+      @include('layouts.admin.ranking')
    </div>
    <!-- /.container-fluid -->
 </div>

@@ -20,7 +20,7 @@
   </form>
 </div>
 
-<div class="table-responsive-lg table-responsive-md table-responsive-sm  table-responsive-xs">
+<div class="table-responsive">
   <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
@@ -54,6 +54,13 @@
           <td>Quezada</td>
           <td>edgardo@gmail.com</td>
           <td>Vendedor</td>
+          <td>
+            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
+          </td>
+
+          <td>
+            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
+          </td>
         </tr>
         <tr>
           <th scope="row">3</th>
@@ -61,6 +68,13 @@
           <td>the Bird</td>
           <td>@twitter</td>
           <td>Vendedor</td>
+          <td>
+            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
+          </td>
+
+          <td>
+            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
+          </td>
         </tr>
       </tbody>
   </table>

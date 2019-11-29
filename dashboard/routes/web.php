@@ -12,9 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('home');
-})->name('home');
+    return view('index');
+})->name('login');
 
-Route::view('users','pages/users')->name('users');
-Route::view('product','pages/product')->name('product');
-Route::view('client','pages/clients')->name('client');
+Route::view('admin','home/admin/home')->name('admin');
+Route::view('users','layouts/admin/pages/users')->name('users');
+Route::view('product','layouts/admin/pages/product')->name('product');
+Route::view('client','layouts/admin/pages/clients')->name('client');
+Route::view('profile','layouts/admin/pages/profile')->name('profile');
