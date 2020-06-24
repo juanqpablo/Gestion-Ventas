@@ -19,9 +19,11 @@
 </head>
 <body class="bg-gradient-primary">
   <div class="container">
+
     <!-- Start login -->
     @yield('contenido')
     <!-- End login -->
+    
   </div>
   <script src="js/app.js" type="text/JavaScript"></script>
   <script src="js/sb-admin-2.js" type="text/JavaScript"></script>

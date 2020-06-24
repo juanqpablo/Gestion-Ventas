@@ -25,7 +25,18 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+
+    //protected $redirectTo = '/admin';
+    public function redirectPath()
+    {
+        // Logic that determines where to send the user
+        if (\Auth::user()->rol == 'administrador') {
+            return '/admin';
+        }
+
+        return '/seller';
+
+    }
 
     /**
      * Create a new controller instance.

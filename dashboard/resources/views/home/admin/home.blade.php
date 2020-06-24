@@ -5,6 +5,7 @@
 @section('contenido')
   <!-- Begin Page Content -->
   <div class="container-fluid">
+    
     <!--Incluye Articulos de  reportes en ganancias -->
       @include('layouts.admin.article')
 

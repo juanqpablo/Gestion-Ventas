@@ -20,12 +20,16 @@
                       <div class="col-md-6">
                           <div class="profile-head">
                                       <h5>
-                                          Juan Quezada
+                                        @auth
+                                          {{auth()->user()->name }} {{auth()->user()->apellido}}
+                                        @endauth
                                       </h5>
                                       <h6>
-                                          Vendedor
+                                        @auth
+                                          {{auth()->user()->rol}}
+                                        @endauth
                                       </h6>
-                                      <p class="proile-rating">RANKINGS : <span>8/10</span></p>
+                                      {{-- <p class="proile-rating">RANKINGS : <span>8/10</span></p>  --}}
                               <ul class="nav nav-tabs" id="myTab" role="tablist">
                                   <li class="nav-item">
                                       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">¿Quien Soy?</a>
@@ -58,7 +62,7 @@
                                                   <label>Cod_vendedor</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>123</p>
+                                                  <p>{{auth()->user()->cod}}</p>
                                               </div>
                                           </div>
                                           <div class="row">
@@ -66,7 +70,7 @@
                                                   <label>Nombre</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>Kshiti</p>
+                                                  <p>{{auth()->user()->name}}</p>
                                               </div>
                                           </div>
                                           <div class="row">
@@ -74,7 +78,7 @@
                                                   <label>Apellidos</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>Ghelani</p>
+                                                  <p>{{auth()->user()->apellido}}</p>
                                               </div>
                                           </div>
                                           <div class="row">
@@ -82,7 +86,7 @@
                                                   <label>Comuna</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>Temuco</p>
+                                                  <p>{{auth()->user()->comuna}}</p>
                                               </div>
                                           </div>
                                           <div class="row">
@@ -90,7 +94,7 @@
                                                   <label>Dirección</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>Vilal el Trebol</p>
+                                                  <p>{{auth()->user()->direccion}}</p>
                                               </div>
                                           </div>
                                           <div class="row">
@@ -98,7 +102,7 @@
                                                   <label>Fono</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>123 456 7890</p>
+                                                  <p>{{auth()->user()->fono}}</p>
                                               </div>
                                           </div>
                                           <div class="row">
@@ -106,7 +110,7 @@
                                                   <label>Correo</label>
                                               </div>
                                               <div class="col-md-6">
-                                                  <p>kshitighelani@gmail.com</p>
+                                                  <p>{{auth()->user()->email}}</p>
                                               </div>
                                           </div>
                               </div>

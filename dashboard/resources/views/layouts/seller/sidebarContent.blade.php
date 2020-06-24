@@ -7,7 +7,15 @@
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Dashboard</div>
+        <div class="sidebar-brand-text mx-3">
+            @if (session('status'))
+                <div class="alert alert-success" role="alert">
+                    {{ session('status') }} <i class="fa fa-circle"  style="color:red;" aria-hidden="true"></i>
+                </div>
+            @endif
+            En Linea <i class="fa fa-circle"  style="color:green;" aria-hidden="true"></i>
+
+        </div>
       </a>
 
       <!-- Divider -->

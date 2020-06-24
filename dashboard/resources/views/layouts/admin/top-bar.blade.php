@@ -151,7 +151,11 @@
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
       <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Juan Quezada</span>
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+          @auth
+            {{auth()->user()->name}}
+          @endauth
+          </span>
         <img class="img-profile rounded-circle" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559454811/team-1.jpg">
       </a>
       <!-- Dropdown - User Information -->
@@ -174,6 +178,7 @@
           <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
           Salir
         </a>
+
       </div>
     </li>
 
@@ -192,15 +197,20 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Advertencia</h5>
         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">×</span>
         </button>
       </div>
-      <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+      <div class="modal-body">Esta seguro de cerrar sesión?</div>
       <div class="modal-footer">
-        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-        <a class="btn btn-primary" href="login.html">Logout</a>
+        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+        <a class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                       document.getElementById('logout-form').submit();" >Salir</a>
+
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
       </div>
     </div>
   </div>
