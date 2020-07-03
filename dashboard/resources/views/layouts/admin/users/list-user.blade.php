@@ -34,48 +34,34 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Juan</td>
-          <td>Quezada</td>
-          <td>juan@gmail.com</td>
-          <td>Vendedor</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Edgardo</td>
-          <td>Quezada</td>
-          <td>edgardo@gmail.com</td>
-          <td>Vendedor</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>Vendedor</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
+        @if($users->isEmpty())
+          <p>NO Hay Registros de Usuarios</p>
+        @else
+          @foreach ($users as $user)
+            <tr>
+              <th scope="row">{{$user->id}}</td>
+              <td>{{$user->name}}</td>
+              <td>{{$user->apellido}}</td>
+              <td>{{$user->email}}</td>
+              <td>{{$user->rol}}</td>
+              <td>
+                @include('layouts/admin/users/edit-user')
+                <button  id="{{$user->id}}" name="edit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#updateModal{{$user->id}}">
+                  <i class="far fa-clipboard fa-md"></i> Editar
+                </button>
+              </td>
+              <td>
+                <form class="user" method="post" action="{{action('UserController@destroy', $user->id)}}">
+                  @csrf
+                  <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="fas fa-user-times fa-md"></i> Eliminar
+                  </button>
+                </form>
+              </td>
+            </tr>
+          @endforeach
+        @endif
       </tbody>
   </table>
 </div>
+{{-- href="{{action('UserController@show', $user->id)}}" --}}

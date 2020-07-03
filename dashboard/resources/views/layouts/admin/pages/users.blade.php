@@ -15,10 +15,10 @@
             <div class="card-body profile-head ">
               <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Usuarios</a>
+                  <a class="nav-link active" id="home-tab" data-toggle="tab" href="#listUser" role="tab" aria-controls="home" aria-selected="true">Usuarios</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Crear</a>
+                  <a class="nav-link" id="profile-tab" data-toggle="tab" href="#createUser" role="tab" aria-controls="profile" aria-selected="false">Crear</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
@@ -26,10 +26,10 @@
               </ul>
               <br>
               <div class="tab-content mb" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="tab-pane fade show active" id="listUser" role="tabpanel" aria-labelledby="listUser-tab">
                     @include("layouts.admin.users.list-user")
                 </div>
-                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="tab-pane fade" id="createUser" role="tabpanel" aria-labelledby="createUser-tab">
                     @include("layouts.admin.users.register")
                 </div>
                 <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">

@@ -2,7 +2,7 @@
   <table class="table table-hover">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">ID</th>
+          <th scope="col">Rut</th>
           <th scope="col">Nombre</th>
           <th scope="col">Apellido</th>
           <th scope="col">Comuna</th>
@@ -14,45 +14,35 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Juan</td>
-          <td>Quezada</td>
-          <td>Temuco</td>
-          <td>Villa El Trebol labranza</td>
-          <td>36659352</td>
-          <td>Vil@gmail.com</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">1</th>
-          <td>Juan</td>
-          <td>Quezada</td>
-          <td>Temuco</td>
-          <td>Villa El Trebol labranza</td>
-          <td>48659352</td>
-          <td>juan@gmail.com</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>Vendedor</td>
-        </tr>
+        @if($clients->isEmpty())
+          <p>NO Hay Registros de Clientes</p>
+        @else
+          @foreach ($clients as $client)
+            <tr>
+              <th scope="row">{{$client->id_client}}</td>
+              <td>{{$client->nombre}}</td>
+              <td>{{$client->apellido}}</td>
+              <td>{{$client->comuna}}</td>
+              <td>{{$client->direccion}}</td>
+              <td>{{$client->fono}}</td>
+              <td>{{$client->email}}</td>
+              <td>
+                @include('layouts/seller/Client/edit-client')
+                <button  id="{{$client->id}}" name="edit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#updateModal{{$client->id}}">
+                  <i class="far fa-clipboard fa-md"></i> Editar
+                </button>
+              </td>
+              <td>
+                <form class="client" method="post" action="{{action('ClientController@destroy', $client->id)}}">
+                  @csrf
+                  <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="fas fa-user-times fa-md"></i> Eliminar
+                  </button>
+                </form>
+              </td>
+            </tr>
+          @endforeach
+        @endif
       </tbody>
   </table>
 </div>

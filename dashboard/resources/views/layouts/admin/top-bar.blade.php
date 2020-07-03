@@ -156,7 +156,7 @@
             {{auth()->user()->name}}
           @endauth
           </span>
-        <img class="img-profile rounded-circle" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559454811/team-1.jpg">
+        <img class="img-profile rounded-circle" src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14044.jpg">
       </a>
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

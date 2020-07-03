@@ -151,8 +151,12 @@
     <!-- Nav Item - User Information -->
     <li class="nav-item dropdown no-arrow">
       <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Juan Quezada</span>
-        <img class="img-profile rounded-circle" src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559454811/team-1.jpg">
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+          @auth
+            {{auth()->user()->name}}
+          @endauth
+        </span>
+        <img class="img-profile rounded-circle" src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14046.jpg">
       </a>
       <!-- Dropdown - User Information -->
       <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

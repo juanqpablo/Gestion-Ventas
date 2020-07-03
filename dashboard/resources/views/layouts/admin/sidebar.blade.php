@@ -68,10 +68,10 @@
         <div id="collapseReporte" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Opciones:</h6>
-            <a class="collapse-item" href="login.html">Ganancias</a>
-            <a class="collapse-item" href="register.html">Ventas Totales</a>
-            <a class="collapse-item" href="login.html"> Ranking Vendedores</a>
-            <a class="collapse-item" href="register.html">Facturas y Liquidaciones</a>
+            <a class="collapse-item" href="#">Ganancias</a>
+            <a class="collapse-item" href="#">Ventas Totales</a>
+            <a class="collapse-item" href="#"> Ranking Vendedores</a>
+            <a class="collapse-item" href="#">Facturas y Liquidaciones</a>
         <!--    <div class="collapse-divider"></div>
             <h6 class="collapse-header">Other Pages:</h6>
             <a class="collapse-item" href="404.html">404 Page</a>

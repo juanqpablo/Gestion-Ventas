@@ -10,7 +10,7 @@
                   <div class="row">
                       <div class="col-md-4">
                           <div class="profile-img">
-                            <center> <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559454811/team-1.jpg" style="margin-bottom:10px;" width="200px" class="rounded-circle "></center>
+                            <center> <img src="https://image.freepik.com/vector-gratis/perfil-avatar-hombre-icono-redondo_24640-14046.jpg" style="margin-bottom:10px;" width="200px" class="rounded-circle "></center>
                              <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="customFileLang" lang="es">
                                 <label class="custom-file-label" for="customFileLang">Subir una Imagen</label>
