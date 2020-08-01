@@ -65,9 +65,11 @@ class ClientController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showPed(Request $req)
     {
         //
+        $client=Cliente::where('id',$req->get('InputidClient'))->firstOrFail();
+        return view('layouts/admin/pages/orders')->with('cliente',$client);
     }
 
     /**

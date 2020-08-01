@@ -20,7 +20,7 @@
           @else
             @foreach ($clients as $client)
               <tr>
-                <th scope="row">{{$client->id_client}}</td>
+                <th scope="row">{{$client->id_client}}</th>
                 <td>{{$client->nombre}}</td>
                 <td>{{$client->apellido}}</td>
                 <td>{{$client->comuna}}</td>

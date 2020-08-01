@@ -7,13 +7,14 @@
           <div class="text-center">
             <h1 class="h4 text-gray-900 mb-4">Nuevo Producto</h1>
           </div>
-          <form class="user">
+          <form class="product" method="POST" action="{{route('registerProd')}}">
+            @csrf
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
-                <input type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="Codigo">
+                <input type="text" class="form-control form-control-user" name="inputCodP" placeholder="Codigo">
               </div>
               <div class="col-sm-6 ">
-                  <select class="custom-select" required>
+                  <select class="custom-select" required name="TypeProd">
                     <option value=""> Categoria</option>
                     <option value="1"> Alimento</option>
                     <option value="2"> Articulo</option>
@@ -22,23 +23,23 @@
               </div>
             </div>
             <div class="form-group">
-              <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Descripcion">
+              <input type="text" class="form-control form-control-user" name="inputNombre" placeholder="Descripcion">
             </div>
             <div class="form-group row">
               <div class="col-sm-4 mb-3 mb-sm-0">
-                <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Peso">
+                <input type="number" class="form-control form-control-user" name="inputPeso" placeholder="Peso">
               </div>
               <div class="col-sm-4">
-                <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Precio">
+                <input type="number" class="form-control form-control-user" name="inputPrecio" placeholder="Precio">
               </div>
               <div class="col-sm-4">
-                <input type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Stock">
+                <input type="number" class="form-control form-control-user" name="inputStock" placeholder="Stock">
               </div>
             </div>
 
-            <a href="login.html" class="btn btn-primary btn-user btn-block">
+            <button type="submit" class="btn btn-primary btn-user btn-block">
               Ingresar Producto
-            </a>
+            </button>
             <hr>
           </form>
           <hr>

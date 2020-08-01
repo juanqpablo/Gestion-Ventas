@@ -53,10 +53,6 @@
                         <label class="custom-control-label" for="customCheck">Recordarme</label>
                       </div>
                     </div>
-
-                    {{-- <a href="{{route('admin')}}" class="btn btn-primary btn-user btn-block">
-                      Iniciar sesión
-                    </a> --}}
                     <button type="submit" class="btn btn-primary btn-user btn-block" name="button">Iniciar sesión</button>
 
                   </form>

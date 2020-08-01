@@ -10,34 +10,46 @@
       <form class="order">
         <div class="form-group row needs-validation" novalidate>
           <div class="col-sm-8 mb-3 mb-sm-0">
-            <input type="text" class="form-control form-control-order" id="InputidClient" placeholder="Rut Cliente">
+            <form class="cliente" method="POST" action="{{route('searchClient')}}">
+              @csrf
+              <div class="form-group row">
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <input type="text" class="form-control form-control-cliente" name="InputidClient" placeholder="Rut Cliente">
+                </div>
+                <div class="col-sm-6 mb-3 mb-sm-0">
+                  <button type="submit" class="btn btn-primary btn-client btn-block">
+                    Buscar
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
         <fieldset disabled>
           <div class="form-group row">
             <div class="col-sm-6 mb-3 mb-sm-0">
-              <input type="text" class="form-control form-control-order " id="InputFirstNameClient" placeholder="Nombre">
+              <input type="text" class="form-control form-control-order " name="InputFirstNameClient" placeholder="Nombre">
             </div>
             <div class="col-sm-6 mb-3 mb-sm-0">
-              <input type="text" class="form-control form-control-order " id="InputLastNameClient" placeholder="Apellido">
+              <input type="text" class="form-control form-control-order " name="InputLastNameClient" placeholder="Apellido">
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-7 mb-3 mb-sm-0">
-              <input type="email" class="form-control form-control-order" id="InputAddressClient" placeholder="Dirección">
+              <input type="email" class="form-control form-control-order" name="InputAddressClient" placeholder="Dirección">
             </div>
             <div class="col-sm-5 mb-3 mb-sm-0">
-              <input type="text" class="form-control form-control-order" id="InputComunaClient"placeholder="Comuna">
+              <input type="text" class="form-control form-control-order" name="InputComunaClient"placeholder="Comuna">
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-4 mb-3 mb-sm-0">
-              <input type="text" class="form-control form-control-order" id="InputPhoneClient"placeholder="Teléfono">
+              <input type="text" class="form-control form-control-order" name="InputPhoneClient"placeholder="Teléfono">
             </div>
           </div>
           <div class="form-group row">
             <div class="col-sm-12 mb-3 mb-sm-0">
-              <input type="email" class="form-control form-control-order" id="InputEmailClient" placeholder="Email">
+              <input type="email" class="form-control form-control-order" name="InputEmailClient" placeholder="Email">
             </div>
           </div>
           <div class="form-group">

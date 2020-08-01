@@ -11,21 +11,21 @@
              <div class="card">
                <div class="card-body profile-head">
                  <ul class="nav nav-tabs" id="myTab" role="tablist">
-                   <li class="nav-item">
-                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Lista Pedidos</a>
-                   </li>
-                   <li class="nav-item">
-                     <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Nuevo Pedido</a>
-                   </li>
+                     <li class="nav-item">
+                       <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Lista Pedidos</a>
+                     </li>
+                     <li class="nav-item">
+                       <a class="nav-link" id="profile-tab" data-toggle="tab" href="#add" role="tab" aria-controls="profile" aria-selected="false">Nuevo Pedido</a>
+                     </li>
                  </ul>
                  <br>
                  <div class="tab-content" id="myTabContent">
-                   <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                       @include("layouts.seller.order.list-order")
-                   </div>
-                   <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                       @include("layouts.seller.order.registerOrder")
-                   </div>
+                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                         @include("layouts.admin.order.list-order")
+                     </div>
+                     <div class="tab-pane fade " id="add" role="tabpanel" aria-labelledby="register-tab">
+                         @include("layouts.admin.order.registerOrder")
+                     </div>
                  </div>
                </div>
              </div>

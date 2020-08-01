@@ -33,7 +33,6 @@ class LoginController extends Controller
         if (\Auth::user()->rol == 'administrador') {
             return '/admin';
         }
-
         return '/seller';
 
     }

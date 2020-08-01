@@ -35,51 +35,34 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">780345618</th>
-          <td>Adulto Razas Pequeñas Carne y Pollo </td>
-          <td>Alimento Para Perro</td>
-          <td>3</td>
-          <td>6990</td>
-          <td>1000</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">780345620</th>
-          <td>Adulto Razas Medianas Carne y Pollo </td>
-          <td>Alimento Para Perro</td>
-          <td>3</td>
-          <td>5990</td>
-          <td>780</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
-        <tr>
-          <th scope="row">780345650</th>
-          <td>Adulto Carne</td>
-          <td>Alimento para Gatos</td>
-          <td>8</td>
-          <td>22900</td>
-          <td>1140</td>
-          <td>
-            <button class="btn btn-primary btn-sm"><i class="far fa-clipboard fa-md"></i> Editar</button>
-          </td>
-
-          <td>
-            <button class="btn btn-danger btn-sm"><i class="fas fa-user-times fa-md"></i> Eliminar</button>
-          </td>
-        </tr>
+        @if($products->isEmpty())
+          <p>NO Hay Registros de Productos</p>
+        @else
+          @foreach ($products as $product)
+            <tr>
+              <th scope="row">{{$product->cod_product}}</td>
+              <td>{{$product->nombre}}</td>
+              <td>{{$product->categoria}}</td>
+              <td>{{$product->peso}}</td>
+              <td>{{$product->precio}}</td>
+              <td>{{$product->stock}}</td>
+              <td>
+                 @include('layouts/admin/products/edit-products')
+                <button  id="{{$product->id_prod}}" name="edit" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#updateModal{{$product->id_prod}}">
+                  <i class="far fa-clipboard fa-md"></i> Editar
+                </button>
+              </td>
+              <td>
+                <form class="client" method="post" action="{{action('ProductController@destroy', $product->id_prod)}}">
+                  @csrf
+                  <button type="submit" class="btn btn-danger btn-sm">
+                    <i class="fas fa-user-times fa-md"></i> Eliminar
+                  </button>
+                </form>
+              </td>
+            </tr>
+          @endforeach
+        @endif
       </tbody>
   </table>
 </div>

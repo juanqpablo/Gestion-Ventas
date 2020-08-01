@@ -28,14 +28,12 @@ Route::get('/seller', function(){
 
 //Configuration views
 Route::view('admin','home/admin/home')->name('admin');
-Route::view('product','layouts/admin/pages/product')->name('product');
 Route::view('profile','layouts/admin/pages/profile')->name('profile');
-Route::view('orders','layouts/admin/pages/orders')->name('orders');
+//Route::view('orders','layouts/admin/pages/orders')->name('orders');
 Route::view('sents','layouts/admin/pages/sents')->name('sents');
 
 //Routes view Seller
 Route::view('seller','home/seller/home')->name('seller');
-Route::view('product-seller','layouts/seller/pages/product')->name('productS');
 Route::view('orders-seller','layouts/seller/pages/orders')->name('ordersS');
 Route::view('sents-seller','layouts/seller/pages/sents')->name('sentsS');
 Route::view('profile-seller','layouts/seller/pages/profile')->name('profileS');
@@ -62,6 +60,22 @@ Route::post('client-e/{id?}','ClientController@update')->name('updateClientA');/
 Route::post('client-seller-e/{id?}','ClientController@update')->name('updateClientV');//ACTUALIZAR vendedor
 Route::post('client-d/{id?}','ClientController@destroy')->name('deleteClientA');//BORRAR Admin
 Route::post('client-seller-d/{id?}','ClientController@destroy')->name('deleteClientV');//BORRAR vendedor
+Route::post('orders-cli','ClientController@showPed')->name('searchClient');//Buscar 1 cliente
+
+//MODULO Producto
+Route::get('product','ProductController@MostrarProductos')->name('product');//listar Admin
+Route::post('register-prod','ProductController@store')->name('registerProd');
+Route::post('product/{id?}','ProductController@update')->name('updateProd');
+Route::post('product-d/{id2?}','ProductController@destroy')->name('deleteProd');
+Route::get('product-seller','ProductController@MostrarProductos')->name('productS');//listar vendedor
+
+//MODULO PEDIDO
+Route::get('orders','OrderController@index')->name('orders');//listar Admin
+Route::get('orders-seller','OrderController@index')->name('ordersS');//listar seller
+//Route::post('register-order','OrderController@store')->name('registerOrders');
+//Route::post('product/{id?}','OrderController@update')->name('updateProd');
+Route::post('orders-seller/{id2?}','OrderController@destroy')->name('deleteProd');
+//Route::get('product-seller','OrderController@MostrarProductos')->name('productS');//listar vendedor
 
 
 // Route::get('test',function(){
